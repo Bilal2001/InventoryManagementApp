@@ -1,0 +1,27 @@
+
+
+- DB structure deciding
+    - Admin users (username, email, password, role[Optional])
+    
+    - Role (role_id, role_name)
+    - Brand (brand_id, name)
+    - SKU  (sku_id, name, description, used)
+    - Status (Status_id, name, description)
+    - Warehouse (Warehouse_id, name, location, description)
+    - Item Category (category_id, name, main[0,1], sub[0,1], parent[Optional])
+    - Item Master (item_id, name, description, quantity, purchase_price, selling_price)
+    - Alerts (alert_id, name, description, item_id, critical_level_quantity, reorder_level_quantity, critical_level_alert)
+    - Vendor (vendor_id, name, company, address, contact_person, contact_phone, contact_email)
+    - Purchase (purchase_id, recieved_date, invoice_no, invoice_date, taxes, shipping, discount, total, description)  [store multiple bills as invoice_no]
+
+    - Item_Vendor_Mapping (id, vendor_id, item_id)
+    - Purchase_Details (id, purchase_id, item_id, brand_id, batch_no, Warehouse_id, quantity, unit, price_per_piece, amount, description)
+                        1    1            25        6        abc        A            10
+                        2    1            25        6        def        B            20
+
+                        
+- Flow 
+
+- Stages Division
+
+- Ek ek krke complete

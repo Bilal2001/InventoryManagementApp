@@ -1,0 +1,13 @@
+
+- Frontend
+    - login
+    - download last 3 years of ITR
+
+- Admin
+    - login
+    - save every year ITR of every user
+    - manage users and their details
+
+- DB:
+    - Users (id, name, password, email, contact_phone)
+    - ITR (id, path, user_id, year)
