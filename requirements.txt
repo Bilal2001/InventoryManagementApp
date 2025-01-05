@@ -2,3 +2,8 @@ fastapi
 uvicorn
 sqlmodel
 phonenumbers
+pydantic[email]
+python-dotenv
+python-jose
+passlib
+bcrypt

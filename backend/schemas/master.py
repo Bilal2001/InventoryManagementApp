@@ -1,8 +1,8 @@
 from typing import Annotated, Optional
 from pydantic import EmailStr, AfterValidator, SecretStr
 from sqlmodel import Field
-from validators import validate_phone
-from base import BaseTable, BaseUpdateTable
+from .validators import validate_phone
+from .base import BaseTable, BaseUpdateTable
 
 
 class Role(BaseTable, table=True):
