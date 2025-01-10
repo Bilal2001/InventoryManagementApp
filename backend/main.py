@@ -19,6 +19,7 @@ app = FastAPI(debug=True, lifespan=lifespan)
 
 #* Routes
 app.include_router(AdminRoute)
+app.include_router(RoleRoute)
 
 #* Middleware
 app.add_middleware(

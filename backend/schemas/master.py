@@ -1,9 +1,7 @@
-from typing import Annotated, Optional
-from pydantic import EmailStr, AfterValidator, SecretStr
-from sqlmodel import Field, Relationship
-from .validators import validate_phone
-from .base import BaseTable, BaseUpdateTable
-
+from typing import Optional
+from pydantic import EmailStr
+from sqlmodel import Field
+from .base import BaseUpdateTable
 
 class MasterRole(BaseUpdateTable, table=True):
     role_name: str = Field(unique=True, nullable=False)
