@@ -10,7 +10,7 @@ from ..schemas.master_support import RoleCreate, RoleUpdate
 
 app = APIRouter(prefix="/role", tags=["role"])
 
-@app.post("/role")
+@app.post("")
 async def create_role(
     role_data: RoleCreate,
     session: Session = Depends(get_session)
@@ -33,7 +33,7 @@ async def create_role(
     return role
 
 
-@app.put("/role/{role_id}")
+@app.put("/{role_id}")
 def update_role(
     role_id: int,
     role_details: RoleUpdate, 
@@ -56,7 +56,7 @@ def update_role(
     return role
 
 
-@app.delete("/role/{role_id}")
+@app.delete("/{role_id}")
 def delete_role(
     role_id: int,
     session: Session = Depends(get_session)
@@ -72,7 +72,7 @@ def delete_role(
     session.refresh(role)
     return JSONResponse(status_code=200, content={"detail": "Successfully deleted Role"})
 
-@app.get("/role/{role_id}")
+@app.get("/{role_id}")
 def get_role(
     role_id: int,
     session: Session = Depends(get_session)
@@ -84,7 +84,7 @@ def get_role(
 
     return role
 
-@app.get("/role")
+@app.get("")
 def get_all_roles(
     session: Session = Depends(get_session)
 ):
