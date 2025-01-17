@@ -17,3 +17,10 @@ class BrandCreate(BaseModel):
 
 class BrandUpdate(BaseModel):
     updated_brand_name: str
+
+class AccountTypeCreate(BaseModel):
+    created_by: str
+    account_type: str
+
+class AccountTypeUpdate(BaseModel):
+    updated_account_type: str

@@ -27,11 +27,11 @@ class MasterWarehouse(BaseUpdateTable, table=True):
     location: Optional[str] = Field(default="")
     description: Optional[str] = Field(default="", max_length=500)
 
-class MasterAccount(BaseUpdateTable, table=True):
+class MasterAccountType(BaseUpdateTable, table=True):
     account_type: str = Field(nullable=False)
 
 class MasterAccountDetails(BaseUpdateTable, table=True):
-    account_id: int = Field(nullable=False, foreign_key="masteraccount.id")
+    account_id: int = Field(nullable=False, foreign_key="masteraccounttype.id")
     name: str
     phone: str
     contact_person: Optional[str] = Field(default="")
@@ -65,7 +65,7 @@ class MasterItemDetails(BaseUpdateTable, table=True):
 
 class MasterItemVendor(BaseUpdateTable, table=True):
     item_id: int = Field(nullable=False, foreign_key="masteritem.id")
-    vendor_account_id: int = Field(nullable=False, foreign_key="masteraccount.id")
+    vendor_account_id: int = Field(nullable=False, foreign_key="masteraccounttype.id")
     purchase_price: float = Field(nullable=False)
     purchase_unit_id: int = Field(nullable=False, foreign_key="masterunit.id")
     brand_id: int = Field(nullable=False, foreign_key="masterbrand.id")
