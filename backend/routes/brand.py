@@ -1,8 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import JSONResponse
-from sqlmodel import Session, select, update
+from sqlmodel import Session, select
 
-from ..auth import create_access_token, get_password_hash, verify_password
 from ..database import get_session
 from ..schemas.master import MasterBrand
 from ..schemas.admin import Admin
