@@ -10,3 +10,10 @@ class RoleCreate(BaseModel):
 
 class RoleUpdate(BaseModel):
     updated_role_name: str
+
+class BrandCreate(BaseModel):
+    created_by: str
+    brand_name: str
+
+class BrandUpdate(BaseModel):
+    updated_brand_name: str
